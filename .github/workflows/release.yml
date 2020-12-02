@@ -45,7 +45,7 @@ jobs:
  #         - {"name": "rpi4", "output": "rpi4", "runner": "arm-runner"}
           - {"name": "rpi4_64", "output": "rpi4-64", "runner": "self-hosted"}
  #         - {"name": "tinker", "output": "tinker", "runner": "arm-runner"}
-    runs-on: self-hosted
+    runs-on: ubuntu-20.4
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
