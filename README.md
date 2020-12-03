@@ -1,3 +1,5 @@
+Pas de bouton 
+
 # Home Assistant Operating System
 
 Home Assistant Operating System (formerly HassOS) is an operating system optimized for hosting [Home Assistant](https://www.home-assistant.io) and its [Add-ons](https://www.home-assistant.io/addons/).
