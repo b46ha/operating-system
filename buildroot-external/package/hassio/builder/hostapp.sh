@@ -4,8 +4,8 @@ set -e
 ARCH=
 MACHINE=
 DATA_IMG="/export/data.ext4"
-VERSION_URL="https://version.home-assistant.io/stable.json"
-APPARMOR_URL="https://version.home-assistant.io/apparmor.txt"
+VERSION_URL="https://vath.s3-eu-west-1.amazonaws.com/stable.json"
+APPARMOR_URL="https://vath.s3-eu-west-1.amazonaws.com/apparmor.txt"
 
 # Parse
 while [[ $# -gt 0 ]]; do
