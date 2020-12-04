@@ -136,23 +136,23 @@ jobs:
           asset_name: hassos_${{ matrix.board.output }}-${{ needs.validate_release.outputs.version }}.vmdk.xz
           asset_content_type: application/x-xz
 
-  bump_version:
-    name: Bump dev version to ${{ needs.validate_release.outputs.version }}
-    needs: [ build, validate_release ]
-    runs-on: [ "ubuntu-20.04" ]
+#  bump_version:
+#    name: Bump dev version to ${{ needs.validate_release.outputs.version }}
+#    needs: [ build, validate_release ]
+#    runs-on: [ "ubuntu-20.04" ]
+#
+#    steps:
+#    - name: Initialize git
+#      uses: home-assistant/actions/helpers/git-init@master
+#      with:
+#        name: ${{ secrets.GIT_NAME }}
+#        email: ${{ secrets.GIT_EMAIL }}
+#        token: ${{ secrets.GIT_TOKEN }}
 
-    steps:
-    - name: Initialize git
-      uses: home-assistant/actions/helpers/git-init@master
-      with:
-        name: ${{ secrets.GIT_NAME }}
-        email: ${{ secrets.GIT_EMAIL }}
-        token: ${{ secrets.GIT_TOKEN }}
-
-    - name: Bump Home Assistant OS dev version
-      uses: home-assistant/actions/helpers/version-push@master
-      with:
-        key: "hassos[]"
-        key-description: "Home Assistant OS"
-        version: ${{ needs.validate_release.outputs.version }}
-        channel: "dev"
+#    - name: Bump Home Assistant OS dev version
+#      uses: home-assistant/actions/helpers/version-push@master
+#      with:
+#        key: "hassos[]"
+#        key-description: "Home Assistant OS"
+#        version: ${{ needs.validate_release.outputs.version }}
+#        channel: "dev"
