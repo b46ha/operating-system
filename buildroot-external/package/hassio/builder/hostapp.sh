@@ -29,7 +29,7 @@ done
 SUPERVISOR="b46ha/${ARCH}-hassio-supervisor"
 DNS="homeassistant/${ARCH}-hassio-dns"
 #AUDIO="homeassistant/${ARCH}-hassio-audio"
-CLI="homeassistant/${ARCH}-hassio-cli"
+CLI="b46ha/${ARCH}-hassio-cli"
 #MULTICAST="homeassistant/${ARCH}-hassio-multicast"
 #OBSERVER="homeassistant/${ARCH}-hassio-observer"
 LANDINGPAGE="b46ha/${MACHINE}-homeassistant:landingpage"
