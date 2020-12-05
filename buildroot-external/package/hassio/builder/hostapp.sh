@@ -27,7 +27,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 SUPERVISOR="b46ha/${ARCH}-hassio-supervisor"
-#DNS="homeassistant/${ARCH}-hassio-dns"
+DNS="homeassistant/${ARCH}-hassio-dns"
 #AUDIO="homeassistant/${ARCH}-hassio-audio"
 CLI="homeassistant/${ARCH}-hassio-cli"
 #MULTICAST="homeassistant/${ARCH}-hassio-multicast"
@@ -36,10 +36,10 @@ LANDINGPAGE="b46ha/${MACHINE}-homeassistant:landingpage"
 
 SUPERVISOR_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.supervisor')
 # DNS_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.dns')
-# CLI_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.cli')
+CLI_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.cli')
 # AUDIO_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.audio')
 # MULTICAST_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.multicast')
-# OBSERVER_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.observer')
+OBSERVER_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.observer')
 
 # Make image
 dd if=/dev/zero of=${DATA_IMG} bs=1G count=1
@@ -76,11 +76,11 @@ docker pull "${SUPERVISOR}:${SUPERVISOR_VERSION}"
 docker tag "${SUPERVISOR}:${SUPERVISOR_VERSION}" "${SUPERVISOR}:latest"
 
 # Install Plugins
-# docker pull "${CLI}:${CLI_VERSION}"
-# docker pull "${DNS}:${DNS_VERSION}"
+docker pull "${CLI}:${CLI_VERSION}"
+docker pull "${DNS}:${DNS_VERSION}"
 # docker pull "${AUDIO}:${AUDIO_VERSION}"
 # docker pull "${MULTICAST}:${MULTICAST_VERSION}"
-# docker pull "${OBSERVER}:${OBSERVER_VERSION}"
+docker pull "${OBSERVER}:${OBSERVER_VERSION}"
 
 # Install landing page
 docker pull "${LANDINGPAGE}"
