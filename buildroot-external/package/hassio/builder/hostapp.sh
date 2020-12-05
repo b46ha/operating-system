@@ -35,7 +35,7 @@ CLI="b46ha/${ARCH}-hassio-cli"
 LANDINGPAGE="b46ha/${MACHINE}-homeassistant:landingpage"
 
 SUPERVISOR_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.supervisor')
-# DNS_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.dns')
+DNS_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.dns')
 CLI_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.cli')
 # AUDIO_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.audio')
 # MULTICAST_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.multicast')
