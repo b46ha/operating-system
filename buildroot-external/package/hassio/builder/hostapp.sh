@@ -27,7 +27,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 SUPERVISOR="b46ha/${ARCH}-hassio-supervisor"
-DNS="homeassistant/${ARCH}-hassio-dns"
+DNS="b46ha/${ARCH}-hassio-dns"
 #AUDIO="homeassistant/${ARCH}-hassio-audio"
 CLI="b46ha/${ARCH}-hassio-cli"
 #MULTICAST="homeassistant/${ARCH}-hassio-multicast"
