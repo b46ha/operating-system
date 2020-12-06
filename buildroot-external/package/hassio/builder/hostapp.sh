@@ -31,7 +31,7 @@ DNS="b46ha/${ARCH}-hassio-dns"
 #AUDIO="homeassistant/${ARCH}-hassio-audio"
 CLI="b46ha/${ARCH}-hassio-cli"
 #MULTICAST="homeassistant/${ARCH}-hassio-multicast"
-#OBSERVER="homeassistant/${ARCH}-hassio-observer"
+OBSERVER="b46ha/${ARCH}-hassio-observer"
 LANDINGPAGE="b46ha/${MACHINE}-homeassistant:landingpage"
 
 SUPERVISOR_VERSION=$(curl -s ${VERSION_URL} | jq -e -r '.supervisor')
