@@ -31,14 +31,14 @@ jobs:
     strategy:
       matrix:
         board:
-          - {"name": "ova", "output": "ova", "runner": "X64"}
+ #         - {"name": "ova", "output": "ova", "runner": "X64"}
  #         - {"name": "intel_nuc", "output": "intel-nuc", "runner": "X64"}
  #         - {"name": "odroid_c2", "output": "odroid-c2", "runner": "aarch64-runner"}
  #         - {"name": "odroid_c4", "output": "odroid-c4", "runner": "aarch64-runner"}
  #         - {"name": "odroid_n2", "output": "odroid-n2", "runner": "aarch64-runner"}
  #         - {"name": "odroid_xu4", "output": "odroid-xu4" , "runner": "aarch64-runner"}
  #         - {"name": "rpi", "output": "rpi", "runner": "arm-runner"}
- #         - {"name": "rpi0_w", "output": "rpi0-w", "runner": "X64"}
+          - {"name": "rpi0_w", "output": "rpi0-w", "runner": "X64"}
           - {"name": "rpi2", "output": "rpi2", "runner": "X64"}
  #         - {"name": "rpi3", "output": "rpi3", "runner": "arm-runner"}
  #         - {"name": "rpi3_64", "output": "rpi3-64", "runner": "X64"}
