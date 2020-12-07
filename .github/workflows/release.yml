@@ -31,7 +31,7 @@ jobs:
     strategy:
       matrix:
         board:
-          - {"name": "ova", "output": "ova", "runner": "X64"}
+ #         - {"name": "ova", "output": "ova", "runner": "X64"}
           - {"name": "intel_nuc", "output": "intel-nuc", "runner": "X64"}
  #         - {"name": "odroid_c2", "output": "odroid-c2", "runner": "aarch64-runner"}
  #         - {"name": "odroid_c4", "output": "odroid-c4", "runner": "aarch64-runner"}
